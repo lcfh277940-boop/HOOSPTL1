@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>تفاصيل الجناح | شيخة للضيافة والفخامة</title>
+  <link rel="icon" href="fotoo1.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="room">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="شيخة، الصفحة الرئيسية">
+      <img class="brand-logo" src="fotoo1.jpeg" alt="شيخة للضيافة والفخامة">
+    </a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي"><a href="index.html">الرئيسية</a><a href="index.html#rooms">الغرف والأجنحة</a><a href="about.html">من نحن</a><a href="services.html">الخدمات والمرافق</a><a href="contact.html">تواصل معنا</a></nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="تفعيل الوضع الليلي"><span aria-hidden="true">◐</span><span class="theme-label">ليلي</span></button>
+      <button class="language-toggle" type="button" aria-label="Switch to English">EN</button>
+      <a class="header-contact" href="tel:+966557123774"><span aria-hidden="true">☎</span><span>اتصل للحجز</span></a>
+      <a class="header-booking" href="#booking-panel">احجزوا إقامتكم <span aria-hidden="true">←</span></a>
+    </div>
+  </header>
+  <main id="room-page">
+    <div class="page-wrap detail-wrap">
+      <nav class="breadcrumbs" aria-label="مسار التنقل"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><a href="index.html#rooms">الغرف والأجنحة</a><span aria-hidden="true">/</span><span id="breadcrumb-room">تفاصيل الجناح</span></nav>
+      <div class="detail-heading">
+        <div><p class="eyebrow"><span></span> مساحة خاصة بكم</p><h1 id="room-title">تفاصيل الجناح</h1><p class="room-location" id="room-view"></p></div>
+        <div class="detail-heading-rating" id="heading-rating"></div>
+      </div>
+
+      <section class="gallery" aria-label="معرض صور الجناح">
+        <div class="gallery-main" id="gallery-main">
+          <img id="gallery-image" src="" alt="" draggable="false">
+          <div class="gallery-shade"></div>
+          <button class="gallery-arrow gallery-next" type="button" aria-label="الصورة التالية">‹</button>
+          <button class="gallery-arrow gallery-prev" type="button" aria-label="الصورة السابقة">›</button>
+          <button class="gallery-fullscreen" type="button" aria-label="فتح الصورة بملء الشاشة"><span aria-hidden="true">⛶</span> عرض كامل</button>
+          <span class="gallery-counter" id="gallery-counter" aria-live="polite">1 / 3</span>
+          <div class="gallery-caption"><span class="caption-index" id="caption-index">01</span><span id="gallery-caption">الجناح</span></div>
+        </div>
+        <div class="gallery-below">
+          <div class="gallery-dots" id="gallery-dots" aria-label="اختيار الصورة"></div>
+          <div class="gallery-thumbs" id="gallery-thumbs" aria-label="الصور المصغرة"></div>
+        </div>
+      </section>
+
+      <div class="detail-layout" id="suite-details">
+        <div class="detail-main">
+          <section class="suite-overview">
+            <div class="suite-overview-top"><p class="eyebrow"><span></span> تفاصيل الإقامة</p><div id="detail-rating"></div></div>
+            <h2 id="detail-title"></h2>
+            <p class="suite-description" id="room-description"></p>
+            <div class="spec-list" id="room-specs"></div>
+          </section>
+          <section class="features-section">
+            <div class="subsection-title"><div><p class="eyebrow"><span></span> صُممت لراحتكم</p><h2>مميزات الجناح</h2></div></div>
+            <div class="feature-grid" id="feature-list"></div>
+          </section>
+          <section class="reviews-section" id="reviews">
+            <div class="subsection-title reviews-heading">
+              <div><p class="eyebrow"><span></span> تجارب ضيوفنا</p><h2>تقييمات النزلاء</h2></div>
+              <div id="reviews-summary"></div>
+            </div>
+            <p class="demo-note review-demo-note"><span aria-hidden="true">ⓘ</span> التعليقات التالية نماذج تجريبية للعرض وليست آراء نزلاء حقيقية.</p>
+            <div class="reviews-grid" id="review-list"></div>
+            <form class="review-form" id="review-form">
+              <div class="review-form-heading"><h3>شاركنا تجربتك</h3><span>سيظهر تقييمك في هذه الصفحة أثناء زيارتك.</span></div>
+              <label class="field-label">اسمك<input name="name" required maxlength="45" placeholder="الاسم" autocomplete="name"></label>
+              <label class="field-label">تقييمك
+                <select name="rating" required aria-label="اختر عدد النجوم"><option value="5">★★★★★ — ممتاز</option><option value="4">★★★★☆ — جيد جداً</option><option value="3">★★★☆☆ — جيد</option><option value="2">★★☆☆☆ — مقبول</option><option value="1">★☆☆☆☆ — يحتاج تحسيناً</option></select>
+              </label>
+              <label class="field-label review-comment-field">تعليقك<textarea name="comment" rows="3" required maxlength="500" placeholder="أخبرنا عن إقامتك..."></textarea></label>
+              <button class="button button-dark" type="submit">إضافة التقييم <span aria-hidden="true">←</span></button>
+              <p class="form-status" id="review-status" role="status"></p>
+            </form>
+          </section>
+        </div>
+        <aside class="booking-card" id="booking-panel">
+          <p class="eyebrow"><span></span> خططوا لإقامتكم</p>
+          <h2>احجزوا هذا الجناح</h2>
+          <div class="booking-price"><strong id="booking-price"></strong><span>لليلة الواحدة</span></div>
+          <form id="room-booking-form" class="booking-form">
+            <div class="booking-date-row">
+              <label class="field-label">تاريخ الوصول<input name="checkin" type="date" required></label>
+              <label class="field-label">تاريخ المغادرة<input name="checkout" type="date" required></label>
+            </div>
+            <div class="booking-date-row">
+              <label class="field-label">عدد النزلاء<select name="guests"></select></label>
+              <label class="field-label">عدد الغرف<select name="rooms"></select></label>
+            </div>
+            <div class="cost-breakdown">
+              <div><span>سعر الإقامة</span><strong id="stay-subtotal"></strong></div>
+              <div><span>الضرائب التجريبية (15%)</span><strong id="stay-tax"></strong></div>
+            </div>
+            <div class="booking-total"><span>الإجمالي التقديري <small id="stay-nights"></small></span><strong id="stay-total"></strong></div>
+            <button class="button button-gold button-full" type="submit">احجز هذا الجناح <span aria-hidden="true">←</span></button>
+            <p class="booking-disclaimer">الأسعار تجريبية ولا تشمل الضرائب أو الرسوم الإضافية.</p>
+            <p class="form-status" id="booking-status" role="status"></p>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <dialog class="lightbox" id="lightbox" aria-label="عرض الصورة بملء الشاشة">
+    <div class="lightbox-toolbar">
+      <span id="lightbox-counter">1 / 3</span>
+      <div><button type="button" id="zoom-out" aria-label="تصغير الصورة">−</button><button type="button" id="zoom-in" aria-label="تكبير الصورة">+</button><button type="button" id="lightbox-close" aria-label="إغلاق">×</button></div>
+    </div>
+    <button class="lightbox-arrow lightbox-next" type="button" aria-label="الصورة التالية">‹</button>
+    <img id="lightbox-image" src="" alt="">
+    <button class="lightbox-arrow lightbox-prev" type="button" aria-label="الصورة السابقة">›</button>
+    <p id="lightbox-caption"></p>
+  </dialog>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="index.html"><img class="brand-logo" src="fotoo1.jpeg" alt="شيخة للضيافة والفخامة"></a>
+    <p class="footer-motto">ضيافة تنبع من القلب، في رحاب مكة المكرمة.</p>
+    <div class="footer-contact">
+      <a class="footer-phone" href="tel:+966557123774"><span aria-hidden="true">☎</span><span>اتصل للحجز</span><strong dir="ltr">0557123774</strong></a>
+      <a class="footer-email" href="mailto:hshs1234@gmail.com"><span aria-hidden="true">✉</span><span>راسلنا</span><strong>hshs1234@gmail.com</strong></a>
+      <a class="footer-location" href="https://maps.google.com/?q=Masjid+al-Haram+Makkah" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌖</span><span>الموقع الافتراضي: بجوار المسجد الحرام، مكة المكرمة</span></a>
+    </div>
+    <span>© <span data-year></span> شيخة للضيافة والفخامة</span>
+  </footer>
+  <a class="floating-contact" href="tel:+966557123774" aria-label="اتصل للحجز"><span aria-hidden="true">☎</span><span>اتصل للحجز</span></a>
+  <script src="i18n.js" defer></script>
+</body>
+</html>

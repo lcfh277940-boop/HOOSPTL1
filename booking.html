@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <title>إكمال الحجز | شيخة للضيافة والفخامة</title>
+  <link rel="icon" href="fotoo1.jpeg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="booking">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="شيخة، الصفحة الرئيسية"><img class="brand-logo" src="fotoo1.jpeg" alt="شيخة للضيافة والفخامة"></a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي"><a href="index.html">الرئيسية</a><a href="index.html#rooms">الغرف والأجنحة</a><a href="about.html">من نحن</a><a href="services.html">الخدمات والمرافق</a><a href="contact.html">تواصل معنا</a></nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="تفعيل الوضع الليلي"><span aria-hidden="true">◐</span><span class="theme-label">ليلي</span></button>
+      <button class="language-toggle" type="button" aria-label="Switch to English">EN</button>
+      <a class="header-contact" href="tel:+966557123774"><span aria-hidden="true">☎</span><span>اتصل للحجز</span></a>
+      <a class="header-booking" href="index.html">العودة للأجنحة <span aria-hidden="true">←</span></a>
+    </div>
+  </header>
+  <main class="page-wrap booking-page">
+    <nav class="breadcrumbs" aria-label="مسار التنقل"><a href="index.html">الرئيسية</a><span aria-hidden="true">/</span><span>إكمال الحجز</span></nav>
+    <div class="booking-page-heading"><p class="eyebrow"><span></span> خطوتكم نحو إقامة مميزة</p><h1>إكمال <em>الحجز</em></h1><p>أدخلوا بيانات التواصل لإتمام طلب الإقامة. الأسعار والمعلومات المعروضة تجريبية.</p></div>
+    <div class="checkout-layout">
+      <form class="checkout-form" id="checkout-form">
+        <h2>بيانات الضيف الرئيسي</h2>
+        <div class="checkout-fields">
+          <label class="field-label">الاسم الكامل<input name="fullName" autocomplete="name" required></label>
+          <label class="field-label">البريد الإلكتروني<input name="email" type="email" autocomplete="email" required></label>
+          <label class="field-label">رقم الهاتف<input name="phone" type="tel" autocomplete="tel" required></label>
+          <label class="field-label">ملاحظات إضافية <span class="optional">(اختياري)</span><textarea name="notes" rows="3"></textarea></label>
+        </div>
+        <button class="button button-gold button-full" type="submit">تأكيد طلب الحجز <span aria-hidden="true">←</span></button>
+        <p class="form-status" id="checkout-status" role="status"></p>
+      </form>
+      <aside class="booking-card checkout-summary">
+        <p class="eyebrow"><span></span> ملخص الإقامة</p>
+        <h2 id="checkout-room-name"></h2>
+        <p class="checkout-view" id="checkout-view"></p>
+        <div class="summary-row"><span>تاريخ الوصول</span><strong id="checkout-checkin"></strong></div>
+        <div class="summary-row"><span>تاريخ المغادرة</span><strong id="checkout-checkout"></strong></div>
+        <div class="summary-row"><span>المدة</span><strong id="checkout-nights"></strong></div>
+        <div class="summary-row"><span>النزلاء · الغرف</span><strong id="checkout-guests"></strong></div>
+        <div class="cost-breakdown">
+          <div><span>سعر الإقامة</span><strong id="checkout-subtotal"></strong></div>
+          <div><span>الضرائب التجريبية (15%)</span><strong id="checkout-tax"></strong></div>
+        </div>
+        <div class="booking-total"><span>الإجمالي التقديري</span><strong id="checkout-total"></strong></div>
+        <p class="booking-disclaimer">تجربة حجز تجريبية: لن يتم إرسال طلب أو تحصيل مبلغ.</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <a class="brand brand-footer" href="index.html"><img class="brand-logo" src="fotoo1.jpeg" alt="شيخة للضيافة والفخامة"></a>
+    <p class="footer-motto">ضيافة تنبع من القلب، في رحاب مكة المكرمة.</p>
+    <div class="footer-contact">
+      <a class="footer-phone" href="tel:+966557123774"><span aria-hidden="true">☎</span><span>اتصل للحجز</span><strong dir="ltr">0557123774</strong></a>
+      <a class="footer-email" href="mailto:hshs1234@gmail.com"><span aria-hidden="true">✉</span><span>راسلنا</span><strong>hshs1234@gmail.com</strong></a>
+      <a class="footer-location" href="https://maps.google.com/?q=Masjid+al-Haram+Makkah" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌖</span><span>الموقع الافتراضي: بجوار المسجد الحرام، مكة المكرمة</span></a>
+    </div>
+    <span>© <span data-year></span> شيخة للضيافة والفخامة</span>
+  </footer>
+  <a class="floating-contact" href="tel:+966557123774" aria-label="اتصل للحجز"><span aria-hidden="true">☎</span><span>اتصل للحجز</span></a>
+  <script src="i18n.js" defer></script>
+</body>
+</html>
